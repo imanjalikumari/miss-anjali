@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TheDECORZ</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.head{
+			background: #12185b;
+			color: white;
+			display: flex;
+			padding: 10px;
+			justify-content: space-between;
+		}
+		.head1{
+			margin-left: 5rem;
+		}
+		.head2{
+			margin-right: 5rem;
+		}
+		.head1 span{
+			padding: 5px;
+		}
+		.head2 .fa{
+			padding: 5px;
+			border-radius: 50%;
+			background-color: #317dcb;
+		}
+
+
+		.nav{
+			background-color: #5ba4f0;
+			display: flex;
+			position: sticky;
+			top: 0;
+			width: 100%;
+			height: 62px;
+			z-index: 10;
+			padding-bottom: 0px;
+		}
+		.logo{
+			display: flex;
+			align-items: center;
+		}
+		.logo div{
+			font-size: 20px;
+			color: black;
+			font-weight: bold;
+			font-family: monospace;
+			margin-left: 10rem;
+			font-size: 30px;
+		}
+		.butt{
+			display: flex;
+			align-items: center;
+			margin-left: 3rem;
+			padding: 0 30px;
+		}
+		.butt button{
+/*			height: 40px;*/
+			border-radius: 20px;
+			padding: 0px;
+			border: none;
+			background-color: #5ba4f0;
+			cursor: pointer;
+			font-size: 15px;
+			color: white;
+
+		}
+	
+		.drop-btn .fa{
+			padding: 0 5px;
+		}
+	
+		.dropitems{
+			top: 58px;
+			position: absolute;
+			min-width: 140px;
+			background-color: white;
+			z-index: 1;
+			display: none;
+			padding-top: 0px;
+			overflow: hidden;
+		}
+		
+		.dropitems a{
+			display: block;
+			padding: 12px 16px;
+			text-decoration: none;
+			text-align: center;
+			font-size: 20px;
+			color: grey;
+		}
+		.dropitems a:hover{
+			margin-left: 10px;
+			color: #5ba4f0;
+		}
+		.dropdown:hover .dropitems{
+			display: block;
+		}
+		.butt span{
+			padding: 20px;
+		}
+		.butt button:hover{
+			background-color: white;
+			color: #5ba4f0;
+			border-radius: 50px;
+			padding: 10px;
+		}
+		.butt .c-home{
+			background-color: white;
+			color: #5ba4f0;
+			padding: 10px;
+		}
+
+		.container-slider{
+			width: 100%;
+			height: 600px;
+			background-color: white;
+			overflow: hidden;
+		}
+		.slider img{
+			width: 100%;
+			height: 600px;
+			background-size: cover;
+		}
+
+		.slider{
+			width: 100%;
+			animation-name: slide;
+			animation-duration: 9s;
+			animation-direction: alternate;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			float: right;
+		}
+		@keyframes slide{
+			0%{transform: translateY(0);}
+			8.3%{transform: translateY(0);}
+			16.6%{transform: translateY(-600px);}
+			24.9%{transform: translateY(-600px);}
+			33.2%{transform: translateY(-1200px);}
+			41.5%{transform: translateY(-1200px);}
+			49.8%{transform: translateY(-1200px);}
+			58.1%{transform: translateY(-1200px);}
+			66.4%{transform: translateY(-600px);}
+			74.7%{transform: translateY(-600px);}
+			83%{transform: translateY(0);}
+			91.3%{transform: translateY(0);}
+			100%{}
+
+		}
+		.desc{
+			width: 100%;
+			height: 575px;
+			display: flex;
+			margin-top: 5rem;
+			margin-left: 5rem;
+			
+		}
+		.desc .det .span{
+			font-size: 30px;
+			color: black;
+			margin-bottom: 50px;
+		}
+		.det{
+			width: 40%;
+			margin-top: 5rem;
+
+		}
+		.det .span span{
+			color: grey;
+		}
+		.det p{
+			font-size: 20px;
+			color: grey;
+			margin-top: 3.5rem;
+		}
+		.vase{
+			width: 50%;
+			margin-left: 200px;
+		}
+		.vase img{
+			width: 500px;
+			height: 500px;
+		}
+		#feat{
+			display: flex;
+			width: 100%;
+			justify-content: space-around;
+			margin-top: 2rem;
+		}
+		.feat{
+/*			display: flex;*/
+			width: 350px;
+			height: 500px;
+			margin-left: 2rem;
+		}
+		.feat:hover{
+			transform: scale(1.1);
+		}
+		.image-f{
+			width: 350px;
+			height: 400px;
+		}
+		.image-des{
+			width: 350px;
+			height: 100px;
+		}
+		.btnn{
+			text-align: center;
+		}
+		.btnn button{
+			cursor: pointer;
+			padding: 7px 20px;
+			margin-top: 1rem;
+			background-color: black;
+			color: white;
+		}
+		.featured{
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: bold;
+			margin-left: 2rem;
+		}
+		
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.login-page .form .login{
+  margin-top: -31px;
+margin-bottom: 26px;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family:sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family:sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #328f8a;
+  background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+.form .create {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .create a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+/* .above-footer{
+	background-color: #0f0bf7;
+} */
+.footer{
+	background-color: #5ba4f0;
+	padding: 20px;
+}
+.footer p{
+	text-align: center;
+	font-size: 30px;
+	font-weight: 500;
+}
+.box{
+	display: flex;
+	justify-content: space-around;
+	padding: 50px;
+	list-style: none;
+	background-color:skyblue;
+}
+.icons i{
+	padding:10px;
+}
+</style>
+
+</head>
+<body>
+	<div class="head">
+		<div class="head1">
+		<i class="fa fa-phone" aria-hidden="true"></i><span>+91 8757306643</span><span>|</span>
+		<i class="fa fa-map-marker" aria-hidden="true"></i><span>844101-Bihar Patna, Boring road</span>
+		<span>|</span>
+		<i class="fa fa-envelope" aria-hidden="true"></i><span>info@Angel'sDECORZ.india.com</span>
+	</div>
+		<div class="head2">
+			<i class="fa fa-facebook" aria-hidden="true"></i>
+			<i class="fa fa-linkedin" aria-hidden="true"></i>
+			<i class="fa fa-instagram" aria-hidden="true"></i>
+		</div>
+	</div>
+
+	<div class="nav">
+		<div class="logo">
+		    <div>Angel's DECORZ</div>
+	    </div>
+	    <div class="butt">
+		    <span><button class="c-home">Home</button></span>
+		    <div class="dropdown">
+		    <span><button class="drop-btn">Our Products<i class="fa fa-caret-down" aria-hidden="true"></i></button></span>
+		    <div class="dropitems">
+		    	<a href="#">item-1</a>
+		    	<a href="#">item-2</a>
+		    	<a href="#">item-3</a>
+		    </div></div>
+			<div class="dropdown">
+				<span><button class="drop-btn">Decor<i class="fa fa-caret-down" aria-hidden="true"></i></button></span>
+				<div class="dropitems">
+					<a href="#">Vases</a>
+					<a href="#">candles+votives</a>
+					<a href="#">Photo Frame</a>
+					<a href="#">Mirror</a>
+					<a href="#">Decor Object</a>
+				</div></div>
+			<div class="dropdown">
+				<span><button class="drop-btn">Gifts<i class="fa fa-caret-down" aria-hidden="true"></i></button></span>
+				<div class="dropitems">
+					<a href="#">Christmas</a>
+					<a href="#">Weeding Gift Hampers</a>
+					<a href="#">Gift Cards</a>
+				</div></div>
+				<span><a href="#box"><button>About us</button></a></span>
+				<span><button>Contact Us</button></span>
+
+	    </div>
+	</div>
+
+ 
+<div class="container-slider">
+	<div class="slider">
+		<img src="https://cdn.shopify.com/s/files/1/2690/0106/files/Glamorous_6_1300x.png?v=1666868973">
+		<img src="https://images4.alphacoders.com/668/668480.jpg">
+		<img src="https://ae01.alicdn.com/kf/HTB1cTfdaHb85uJjSZFmq6AgsFXal/modern-3D-Wallpaper-HD-Golden-flower-Photo-Mural-Living-Room-Home-Decor-Wall-paper-Abstract-Floral.jpg">
+	</div>
+</div>
+
+<div class="desc">
+	<div class="det">
+		<span class="span"><span>WELCOME TO</span> DECORZ<span>
+		<p>Home decoration items are key features in accomplishing a well-decorated home. Wooden Street brings the collection of home decor online in India that can dress your interior with charm. From home furnishing items to wall decor accessories, everything in home decoration online collection has a significance that transforms any drab home into a beautiful mansion. Home decor items have a great impact in making the home sounds complete. It helps you out in every scenario, whether you want to add aesthetics to the home through cushions and curtains or bring functionality through lamps and lightings, the home decor items do brilliantly in giving the room the much-needed desired look.</p>
+	</div>
+	<div class="vase">
+		<img src="https://i.pinimg.com/originals/51/97/df/5197df9649df512568dbd9eb32700fed.jpg">
+	</div>
+</div>
+
+<p class="featured">FEATURED</p>
+<div id="feat">
+<div class="feat">
+	<div class="image-f">
+		<img src="https://ae01.alicdn.com/kf/HTB1Hjz8RXXXXXXYXVXXq6xXFXXXd/Beibehang-3D-Wallpaper-Decorative-3d-European-Palace-Wind-Golden-Jewelery-Flower-TV-Wall-Background-Wallpaper-for.jpg" width="350px" height="400px">
+	</div>
+	<div class="btnn">
+		<button>SHOP NOW</button> 
+	</div>
+	</div>
+
+
+<div class="feat">
+	<div class="image-f">
+		<img src="https://th.bing.com/th/id/R.6df6503c5a40e3dd56fa0135dfa0c9ca?rik=OC7NttiOwbxw2A&riu=http%3a%2f%2fwww.kmart.com.au%2fwcsstore%2fKmart%2fimages%2fespots%2fhome-decor-tall-banner-160518-desktop.jpg&ehk=HWY21YgadXWL2axHPuxGgsZtJiravodNQ23uB60YtZU%3d&risl=&pid=ImgRaw&r=0" width="350px" height="400px">
+	</div>
+	<div class="btnn">
+		<button>SHOP NOW</button> 
+	</div>
+	</div>
+
+<div class="feat">
+	<div class="image-f">
+		<img src="https://th.bing.com/th/id/OIP.tbYpw9hiriZFsEUoRmbKGQHaJ5?pid=ImgDet&rs=1" width="350px" height="400px">
+	</div>
+	<div class="btnn">
+		<button>SHOP NOW</button> 
+	</div>
+</div>
+</div>
+<div id="feat">
+	<div class="feat">
+		<div class="image-f">
+			<img src="decorz4.jpg" width="350px" height="400px">
+		</div>
+		<div class="btnn">
+			<button>SHOP NOW</button> 
+		</div>
+	</div>
+	
+	<div class="feat">
+		<div class="image-f">
+			<img src="decorz2.jpg" width="350px" height="400px">
+		</div>
+		<div class="btnn">
+			<button>SHOP NOW</button> 
+		</div>
+	</div>
+	
+	<div class="feat">
+		<div class="image-f">
+			<img src="decorz5.jpg" width="350px" height="400px">
+		</div>
+		<div class="btnn">
+			<button>SHOP NOW</button> 
+		</div>
+	</div>
+	</div>
+	
+	<div id="feat">
+		<div class="feat">
+			<div class="image-f">
+				<img src="decorz9.jpg" width="350px" height="400px">
+			</div>
+			<div class="btnn">
+				<button>SHOP NOW</button> 
+			</div>
+		</div>
+	
+			<div class="feat">
+				<div class="image-f">
+					<img src="decorz8.jpg" width="350px" height="400px">
+				</div>
+				<div class="btnn">
+					<button>SHOP NOW</button> 
+				</div>
+			</div>
+	
+				<div class="feat">
+					<div class="image-f">
+						<img src="decorz7.jpg" width="350px" height="400px">
+					</div>
+					<div class="btnn">
+						<button>SHOP NOW</button> 
+					</div>
+				</div>
+			</div>
+			<div id="feat">
+				<div class="feat">
+					<div class="image-f">
+						<img src="decorz10.jpg" width="350px" height="400px">
+					</div>
+					<div class="btnn">
+						<button>SHOP NOW</button> 
+					</div>
+				</div>
+			
+			<div class="feat">
+				<div class="image-f">
+					<img src="decorz11.jpg" width="350px" height="400px">
+				</div>
+				<div class="btnn">
+				<button>SHOP NOW</button> 
+			</div>
+		</div>
+	
+			<div class="feat">
+				<div class="image-f">
+					<img src="decorz12.jpg" width="350px" height="400px">
+				</div>
+				<div class="btnn">
+					<button>SHOP NOW</button> 
+				</div>
+			</div>
+			</div>
+
+			<div id="feat">
+				<div class="feat">
+					<div class="image-f">
+						<img src="decorz13.jpg" width="350px" height="400px">
+					</div>
+					<div class="btnn">
+						<button>SHOP NOW</button> 
+					</div>
+				</div>
+	
+					<div class="feat">
+						<div class="image-f">
+							<img src="decorz14.jpg" width="350px" height="400px">
+						</div>
+						<div class="btnn">
+							<button>SHOP NOW</button> 
+						</div>
+					</div>
+	
+				<div class="feat">
+					<div class="image-f">
+							<img src="decorz15.jpg" width="350px" height="400px">
+						</div>
+						<div class="btnn">
+						<button>SHOP NOW</button> 
+						</div>
+					</div>
+			</div>
+	
+			<div id="feat">
+				<div class="feat">
+					<div class="image-f">
+						<img src="decorz16.jpg" width="350px" height="400px">
+					</div>
+					<div class="btnn">
+						<button>SHOP NOW</button> 
+					</div>
+				</div>
+	
+					<div class="feat">
+						<div class="image-f">
+							<img src="decorz17.jpg" width="350px" height="400px">
+						</div>
+						<div class="btnn">
+							<button>SHOP NOW</button> 
+						</div>
+					</div>
+
+						<div class="feat">
+							<div class="image-f">
+								<img src="decorz18.jpg" width="350px" height="400px">
+							</div>
+							<div class="btnn">
+								<button>SHOP NOW</button> 
+							</div>
+						</div>
+			</div>
+
+ <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>LOGIN</h3>
+            <p>Please enter your credentials to login.</p>
+          </div>
+        </div>
+        <div class="login-form">
+          <input type="text" placeholder="username">
+          <input type="password" placeholder="password">
+          <button>login</button>
+          <p class="create"><a href="#">Create an account</a></p>
+        </div>
+      </div>
+    </div>
+	<div class="box" id="box">
+		<div class="icons">
+			<span><b>STAY IN TOUCH</b></span>
+			<P>Sign up for exclusive offers, <br>
+			original stories, events and more.</P>
+			<i class="fa fa-facebook" style="font-size: 30px;"></i>
+			<i class="fa fa-twitter" style="font-size:30px"></i>
+			<i class="fa fa-pinterest" style="font-size:30px"></i>
+			<i class="fa fa-instagram" style="font-size:30px"></i>
+
+
+		</div>
+		<div>
+			<p><b>TOP CATEGORIES</b></p>
+			<li>Dining</li>
+			<li>Kitchen</li>
+			<li>Decor</li>
+			<li>Bath+Storage</li>
+			<li>Soft Furnishing</li>
+			<li>Stationary</li>
+			<li>Garden</li>
+			<li>Shop All</li>
+		</div>
+
+		<div>
+		<p><b>ABOUT US</b></p>
+		<li>Our Story</li>
+		<li>Blog</li>
+		<li>Careers</li>
+		<li>Offers</li></div>
+		<div>
+			<P><b>QUICK LINKS</b></P>
+			<li>Collection</li>
+			<li>Festive</li>
+			<li>Sale</li>
+			<li>Gift Cards</li>
+			<li>Offers</li>
+		</div>
+		<div>
+			<p><b>HELP</b></p>
+			<li>Returns</li>
+			<li>Shipping</li>
+			<li>Privacy Policy</li>
+			<li>Contact Us</li>
+			<li>FAQs</li>
+		</div>
+	</div>
+	
+<div class="footer">
+  <p class="text-center">Copyright &copy; TheDECORZ.com</p>
+</div>
+
+</body>
+</html>  
